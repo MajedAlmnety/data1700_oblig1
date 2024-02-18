@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Cinma Tecket</title>
+    <script src="index.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Payment Cinma Tecket</h2></br>
+            <form class="form" >
+                <div class="form-group">
+                    <label for="filmer">Velg Film</label>
+                    <select id="filmer" class="form-control">
+                        <option value="The Godfather">The Godfather</option>
+                        <option value="Casablanca">Casablanca</option>
+                        <option value="Pulp Fiction">Pulp Fiction</option>
+                        <option value="The Shawshank Redemption">The Shawshank Redemption</option>
+                        <option value="Citizen Kane">Citizen Kane</option>
+                        <option value="Schindler's List">Schindler's List</option>
+                        <option value="The Dark Knight">The Dark Knight</option>
+                        <option value="The Lord of the Rings: The Return of the King">The Lord of the Rings: The Return of the King</option>
+                        <option value="Forrest Gump">Forrest Gump</option>
+                        <option value="Inception">Inception</option>
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <label for="antall">Antall</label>
+                    <input type="number" value="1" class="form-control" min="0" id="antall" />
+                    <label id="antallError"></label>
+                </div>
+                <div class="form-group">
+                    <label for="fornavn">Fornavn</label>
+                    <input type="text" class="form-control" id="fornavn" />
+                    <label id="fornavnError" ></label>
+                </div>
+                <div class="form-group">
+                    <label for="etternavn">Etternavn</label>
+                    <input type="text" class="form-control" id="etternavn" />
+                    <label id="etternavnError" ></label>
+                </div>
+                <div class="form-group">
+                    <label for="tel">Telfonnr</label>
+                    <input type="text" class="form-control" id="tel" />
+                    <label id="talError" ></label>
+                </div>
+
+                <div class="form-group">
+                    <label for="epost">E-post</label>
+                    <input type="text" class="form-control" id="epost" />
+                    <label id="epostError" > </label>
+                </div>
+            </form>
+
+            <button class="btn btn-success" onclick="submit()">Buy the tecket</button><br/>
+        </div>
+        <div class="col-md-8">
+            <h3>All teckets:</h3>
+            <div id="billetter"></div>
+            <button class="btn btn-danger" onclick="delete_alle()">Delete All</button>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
